@@ -1,0 +1,182 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.card_container {
+    width: 100%;
+    height: 100vh;
+    background: #f3f979;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_container .card-viewer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card_container .card-viewer .img-box {
+    background: url('https://images.pexels.com/photos/3868316/pexels-photo-3868316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat;
+    background-size: 100%;
+    background-position: 0 -20px;
+    width: 320px;
+    height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* button "view profile "*/
+
+.card_container .card-viewer .img-box .card-button {
+    width: 45%;
+    height: 30px;
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 30px;
+}
+
+.card_container .card-viewer .img-box .card-button span {
+    text-transform: uppercase;
+}
+
+
+
+/* content */ 
+
+.card_container .card-viewer .content-box.hidden {
+    scale: 0;
+    transform: rotateX(90deg);
+    transform-origin: 50% 90%;
+    transition: .3s;
+}
+.card_container .card-viewer .content-box.visible {
+    scale: 1;
+    transform: rotateX(0);
+    transform-origin: 50% 90%;
+    transition: .8s;
+}
+
+.card_container .card-viewer .content-box {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    z-index: 1000;
+
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* close button */
+.card_container .card-viewer .content-box .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_container .card-viewer .content-box .close-button span {
+    font-weight: 900;
+    transform: rotate(45deg);
+}
+
+/* text */
+
+.card_container .card-viewer .content-box h3 {
+    text-transform: uppercase;
+    color: #718587;
+}
+
+.card_container .card-viewer .content-box h4 {
+    text-transform: uppercase;
+    color: #c1c1c1;
+}
+
+.card_container .card-viewer .content-box p {
+    text-align: center;
+    color: #c1c1c1;
+}
+
+/* button "Follow" */
+.card_container .card-viewer .content-box .follow {
+   background: #03bbd3; 
+   border-radius: 20px;
+   width: 60%;
+   height: 40px;
+   cursor: pointer;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   color: #fff;
+   font-size: 22px;
+}
+
+/* icons */
+
+.card_container .card-viewer .content-box .icons {
+    width: 65%;
+    padding-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_container .card-viewer .content-box .icons .iconify {
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+}
+
+.card_container .card-viewer .content-box .icons .facebook {
+    color: #495c8b;
+}
+
+.card_container .card-viewer .content-box .icons .twitter {
+    color: #00b0f3;
+}
+
+.card_container .card-viewer .content-box .icons .google {
+    color: #bf645f;
+}
+
