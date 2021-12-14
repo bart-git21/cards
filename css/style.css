@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-.card_container .card-viewer {
+.card-viewer {
     position: relative;
 
     display: flex;
@@ -32,7 +32,7 @@
     overflow: hidden;
 }
 
-.card_container .card-viewer .img-box {
+.card-viewer .img-box {
     background: url('https://images.pexels.com/photos/3868316/pexels-photo-3868316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat;
     background-size: 100%;
     background-position: 0 -20px;
@@ -49,50 +49,64 @@
 
 /* button "view profile "*/
 
-.card_container .card-viewer .img-box .view-button {
-    width: 45%;
-    height: 30px;
-    border-radius: 20px;
-    background: #fff;
+.card-viewer .img-box .view-button {
+    position: absolute;
     cursor: pointer;
+    bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(to right bottom, #fff, #111);
+    box-shadow: inset 4px 4px 4px 0 rgba(255,255,255, 1),
+                inset -4px -4px 8px 0 rgba(0,0,0, .7);
 
     display: flex;
     justify-content: center;
     align-items: center;
-
+}
+.card-viewer .img-box .view-button:before {
     position: absolute;
-    bottom: 30px;
+    content: "";
+    display: block;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    border-radius: 20px;
 
-    box-shadow: inset 12px 12px 16px 0 rgba(255,255,255, 1),
+    background: linear-gradient(to right bottom, #888, #fff);
+    box-shadow: inset 4px 4px 4px 0 rgba(255,255,255, 1),
                 inset -4px -4px 8px 0 rgba(0,0,0, .7);
 }
 
-.card_container .card-viewer .img-box .view-button.hidden {
+.card-viewer .img-box .view-button.hidden {
     opacity: 0;
 }
 
-.card_container .card-viewer .img-box .view-button span {
-    text-transform: uppercase;
+.card-viewer .img-box .view-button span {
+    z-index: 11;
 }
-
 
 
 /* content */ 
 
-.card_container .card-viewer .content-box.hidden {
+.card-viewer .content-box.hidden {
     scale: 0;
     transform: rotateX(90deg);
     transform-origin: 50% 90%;
     transition: .3s;
 }
-.card_container .card-viewer .content-box.visible {
+.card-viewer .content-box.visible {
     scale: 1;
     transform: rotateX(0);
     transform-origin: 50% 90%;
     transition: .8s;
 }
 
-.card_container .card-viewer .content-box {
+.card-viewer .content-box {
     width: 100%;
     height: 50%;
     position: absolute;
@@ -109,7 +123,7 @@
 }
 
 /* close button */
-.card_container .card-viewer .content-box .close-button {
+.card-viewer .content-box .close-button {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -128,30 +142,30 @@
                 inset -2px -2px 4px 0 rgba(0,0,0, .7);
 }
 
-.card_container .card-viewer .content-box .close-button span {
+.card-viewer .content-box .close-button span {
     font-weight: 900;
     transform: rotate(45deg);
 }
 
 /* text */
 
-.card_container .card-viewer .content-box h3 {
+.card-viewer .content-box h3 {
     text-transform: uppercase;
     color: #718587;
 }
 
-.card_container .card-viewer .content-box h4 {
+.card-viewer .content-box h4 {
     text-transform: uppercase;
     color: #c1c1c1;
 }
 
-.card_container .card-viewer .content-box p {
+.card-viewer .content-box p {
     text-align: center;
     color: #c1c1c1;
 }
 
 /* button "Follow" */
-.card_container .card-viewer .content-box .follow {
+.card-viewer .content-box .follow {
    background: #03bbd3; 
    border-radius: 20px;
    width: 60%;
@@ -171,7 +185,7 @@
 
 /* icons */
 
-.card_container .card-viewer .content-box .icons {
+.card-viewer .content-box .icons {
     width: 65%;
     padding-bottom: 20px;
 
@@ -180,22 +194,22 @@
     align-items: center;
 }
 
-.card_container .card-viewer .content-box .icons .iconify {
+.card-viewer .content-box .icons .iconify {
     width: 24px;
     height: 24px;
     display: block;
     cursor: pointer;
 }
 
-.card_container .card-viewer .content-box .icons .facebook {
+.card-viewer .content-box .icons .facebook {
     color: #495c8b;
 }
 
-.card_container .card-viewer .content-box .icons .twitter {
+.card-viewer .content-box .icons .twitter {
     color: #00b0f3;
 }
 
-.card_container .card-viewer .content-box .icons .google {
+.card-viewer .content-box .icons .google {
     color: #bf645f;
 }
 
