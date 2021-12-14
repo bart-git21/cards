@@ -96,13 +96,13 @@
 .card-viewer .content-box.hidden {
     scale: 0;
     transform: rotateX(90deg);
-    transform-origin: 50% 90%;
+    transform-origin: 50% 80%;
     transition: .3s;
 }
 .card-viewer .content-box.visible {
     scale: 1;
     transform: rotateX(0);
-    transform-origin: 50% 90%;
+    transform-origin: 50% 80%;
     transition: .8s;
 }
 
