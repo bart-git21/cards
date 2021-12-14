@@ -45,7 +45,7 @@
 
 /* button "view profile "*/
 
-.card_container .card-viewer .img-box .card-button {
+.card_container .card-viewer .img-box .view-button {
     width: 45%;
     height: 30px;
     border-radius: 20px;
@@ -60,7 +60,11 @@
     bottom: 30px;
 }
 
-.card_container .card-viewer .img-box .card-button span {
+.card_container .card-viewer .img-box .view-button.hidden {
+    opacity: 0;
+}
+
+.card_container .card-viewer .img-box .view-button span {
     text-transform: uppercase;
 }
 
